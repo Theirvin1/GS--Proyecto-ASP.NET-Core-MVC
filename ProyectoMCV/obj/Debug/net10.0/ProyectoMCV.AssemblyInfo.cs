@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoMCV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a1ce490bdedbc9490e03b67524c1afd1c6338d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0f3607b58039eac4bbdc3e2086e76c64a3fd729")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyectoMCV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyectoMCV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
