@@ -1,0 +1,29 @@
+@model IEnumerable<ProyectoMCV.Models.Producto>
+
+<h2>Catálogo de Libros</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">+ Agregar Libro</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Precio</th>
+            <th>Páginas</th>
+            <th>ISBN</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var libro in Model)
+        {
+            <tr>
+                <td>@libro.Titulo</td>
+                <td>@libro.Autor</td>
+                <td>$@libro.Precio</td>
+                <td>@libro.Paginas</td>
+                <td>@libro.ISBN</td>
+            </tr>
+        }
+    </tbody>
+</table>
