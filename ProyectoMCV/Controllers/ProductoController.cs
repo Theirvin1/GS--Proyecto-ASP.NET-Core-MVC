@@ -29,5 +29,17 @@ namespace ProyectoMCV.Controllers
             }
             return View(producto);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int id)
+        {
+            var producto = _productos.FirstOrDefault(p => p.Id == id);
+            if (producto != null)
+            {
+                _productos.Remove(producto);
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
