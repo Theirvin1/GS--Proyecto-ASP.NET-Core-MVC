@@ -1,12 +1,4 @@
-# GS - Extensión Proyecto ASP.NET Core MVC
-
-Extensión del proyecto ASP.NET Core MVC con catálogo de libros.
-
-## Requisitos
-
-- .NET 8.0 SDK o superior
-- Visual Studio Code
-- Git
+# Proyecto ASP.NET Core MVC — Catálogo de Libros
 
 ## Instrucciones de ejecución
 
@@ -28,12 +20,6 @@ dotnet run
 4. Abrir en el navegador:
 http://localhost:5189/Producto
 
-## Rama de desarrollo
+## Nota
 
-Este proyecto fue extendido en la rama `feature/extension-practica-aspnet-p2`.
-
-## Funcionalidades
-
-- Listado de libros en tabla HTML
-- Agregar nuevo libro con validación cliente y servidor
-- Eliminar libro con confirmación y protección CSRF
+Las funcionalidades extendidas (tabla mejorada, eliminación con CSRF y validación cliente) fueron desarrolladas en la rama `feature/extension-practica-aspnet-p2` e integradas a `main` mediante Pull Request
