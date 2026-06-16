@@ -4,25 +4,43 @@
 
 <a asp-action="Create" class="btn btn-primary mb-3">+ Agregar Libro</a>
 
-<table class="table table-bordered">
-    <thead>
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
         <tr>
+            <th>#</th>
             <th>Título</th>
             <th>Autor</th>
             <th>Precio</th>
             <th>Páginas</th>
             <th>ISBN</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
+        @if (!Model.Any())
+        {
+            <tr>
+                <td colspan="7" class="text-center text-muted">No hay libros registrados.</td>
+            </tr>
+        }
         @foreach (var libro in Model)
         {
             <tr>
+                <td>@libro.Id</td>
                 <td>@libro.Titulo</td>
                 <td>@libro.Autor</td>
                 <td>$@libro.Precio</td>
                 <td>@libro.Paginas</td>
                 <td>@libro.ISBN</td>
+                <td>
+                    <form asp-action="Delete" asp-route-id="@libro.Id" method="post">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger btn-sm"
+                            onclick="return confirm('¿Seguro que deseas eliminar este libro?')">
+                            Eliminar
+                        </button>
+                    </form>
+                </td>
             </tr>
         }
     </tbody>
